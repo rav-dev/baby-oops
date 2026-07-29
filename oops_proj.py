@@ -1,10 +1,36 @@
 class chatbook:
+    __user_id = 0#only class can access class variables not self. 
+
     def __init__(self):
+        self.id = chatbook.__user_id
+        chatbook.__user_id += 1
+        self.__name = "Default User" #hidden attribute
+        #self.user_id = 0
+        #self.user_id += 1 #whenevrr the obj is created it will increment
         self.user_name = ''
         self.password = ''
         self.loggedin = False
         #as soon as the object is created we will call the menu
-        self.menu()
+        #self.menu()
+
+    #it is used to access the class vars no need to pass self 
+    #as only class can access it not the obj 
+
+    @staticmethod
+    def get_id():
+        return chatbook.__user_id
+    
+    @staticmethod
+    def set_id(value):
+        chatbook.__user_id = value
+
+    
+    def get_name(self):
+        return self.__name
+
+    def set_name(self,value):
+        self.__name = value
+
 
     def menu(self):
         """describe the main menu
@@ -83,7 +109,6 @@ class chatbook:
 
 
         
-
 
 
 #usr1 = chatbook()
