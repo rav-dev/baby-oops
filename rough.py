@@ -21,3 +21,13 @@ print(a+b) #in output we get concatination xy not x+y
 # - debugging == easiy to identify in which class and in which method we are getting the error
 # -easy to colab
 
+
+
+
+#we will be using the obj_prod module
+#we will import the chatbook class from oops_proj module
+
+from oops_proj import chatbook
+
+user1 = chatbook()
+
